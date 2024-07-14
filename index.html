@@ -8,8 +8,12 @@
   <link rel="stylesheet" href="./assets/css/output.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Google Pay</title>
+  <style>
+    .expanded-content {
+      display: none; /* Hide divs by default */
+    }
+  </style>
 </head>
-
 <body class="bg-gray-700 max-w-md mx-auto ">
   <div class="flex space-x-4  p-3  bg-neutral-900  ">
     <div class="relative flex-1 text-white ">
@@ -23,7 +27,7 @@
         placeholder="pay friends and merchants">
     </div>
     <div class="">
-      <img class="w-8 rounded-full" src="./assets/img/ANBU.png" alt="anbarasan subramani">
+      <img class="w-6 pt-1 rounded-full" src="./assets/img/ANBU.png" alt="anbarasan subramani">
     </div>
   </div>
   <section class="bg-neutral-900 max-h-[88vh] overflow-y-auto no-scrollbar">
@@ -150,7 +154,7 @@
               <span>vicky</span>
             </div>
           </div>
-          <div class="expanded-content">
+          <div class="expanded-content" id="expanded">
             <div class="flex flex-col justify-center items-center">
               <img src="https://ui-avatars.com/api/?name=malar&background=random&rounded=true" alt="">
               <span>malar</span>
@@ -181,7 +185,7 @@
                   <path fill="currentColor" d="m17.5 8.086l-5.5 5.5l-5.5-5.5L5.086 9.5L12 16.414L18.914 9.5z" />
                 </svg>
               </div>
-              <span class="text-gray-300">Less</span>
+              <span class="text-gray-300">More</span>
             </div>
           </button>
         </div>
@@ -205,17 +209,17 @@
     </section>
   </section>
   <script src="./assets/css/main.js"></script>
-  <script>
+  <!-- <script>
     function toggleMenu() {
-    let expandedContent = document.getElementsByClassName('expanded-content');
-      for (let index = 0; index < expandedContent.length; index++) {
-        let element = expandedContent[index];
-        element.classList.toggle('hidden');
-      }
-      let buttonName=document.getElementById('buttonName').innerText;
-      buttonName='more'
-      console.log(buttonName);
+        const contents = document.querySelectorAll('.expanded-content');
+        contents.forEach(content => {
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block'; // Show the content
+            } else {
+                content.style.display = 'none'; // Hide the content
+            }
+        });
     }
-  </script>
+</script> -->
 </body>
 </html>
